@@ -8,6 +8,7 @@ import HomeScene from './scenes/Home/Home';
 import SearchScene from './scenes/Search/Search';
 
 class BooksApp extends Component {
+
 	state = {
 		books: []
 	};
@@ -58,6 +59,7 @@ class BooksApp extends Component {
 			</div>
 		);
 	}
+
 }
 
-export default BooksApp
+export default BooksApp;

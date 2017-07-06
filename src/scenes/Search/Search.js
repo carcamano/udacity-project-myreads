@@ -13,7 +13,7 @@ class SearchScene extends Component {
 	static propTypes = {
 		books: PropTypes.array.isRequired ,
 		onMoveToShelf: PropTypes.func.isRequired
-	}
+	};
 
 	state = {
 		myBookIds: [] ,

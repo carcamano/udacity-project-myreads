@@ -11,14 +11,14 @@ class Bookcase extends Component {
 	static propTypes = {
 		books: PropTypes.array.isRequired ,
 		onMoveToShelf: PropTypes.func.isRequired
-	}
+	};
 
 	shelves = [ 'currentlyReading' , 'wantToRead' , 'read' ];
 	shelvesTitles = {
 		currentlyReading: 'Currently Reading' ,
 		wantToRead: 'Want To Read' ,
 		read: 'Read'
-	}
+	};
 
 	render() {
 		const books = this.props.books;
@@ -39,4 +39,4 @@ class Bookcase extends Component {
 
 }
 
-export default Bookcase
+export default Bookcase;

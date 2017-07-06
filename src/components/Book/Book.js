@@ -10,7 +10,7 @@ class Book extends Component {
 		book: PropTypes.object.isRequired ,
 		hideNoneShelf: PropTypes.bool ,
 		onMoveToShelf: PropTypes.func.isRequired
-	}
+	};
 
 	render() {
 		const { book } = this.props;
@@ -48,4 +48,4 @@ class Book extends Component {
 
 }
 
-export default Book
+export default Book;

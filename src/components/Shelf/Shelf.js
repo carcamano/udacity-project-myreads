@@ -12,8 +12,7 @@ class Shelf extends Component {
 		title: PropTypes.string.isRequired ,
 		books: PropTypes.array.isRequired ,
 		onMoveToShelf: PropTypes.func.isRequired
-	}
-
+	};
 
 	render() {
 		return (
@@ -38,4 +37,4 @@ class Shelf extends Component {
 
 }
 
-export default Shelf
+export default Shelf;

@@ -13,7 +13,7 @@ class HomeScene extends Component {
 	static propTypes = {
 		books: PropTypes.array.isRequired ,
 		onMoveToShelf: PropTypes.func.isRequired
-	}
+	};
 
 	render() {
 		return (
