@@ -22,6 +22,10 @@ class SearchScene extends Component {
 
 	timeout = null;
 
+	/**
+	 * @description Search for a book on Udacity BookAPI and populate state.result
+	 * @param {query} string - Part of book title or author
+	 */
 	search = ( query ) => {
 		clearTimeout( this.timeout );
 		this.timeout = setTimeout( () => {
@@ -33,6 +37,11 @@ class SearchScene extends Component {
 		} , 300 );
 	};
 
+	/**
+	 * @description Move a book from a shelf to another
+	 * @param {object} book - The book itself
+	 * @param {string} shelf - The destination shelf, should be one of: 'currentlyReading' , 'wantToRead' or 'read'
+	 */
 	moveToShelf = ( book , shelf ) => {
 		this.setState( ( state ) => ({ myBookIds: state.myBookIds.concat( [ book.id ] ) }) );
 		this.props.onMoveToShelf( book , shelf );

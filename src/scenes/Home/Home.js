@@ -11,16 +11,18 @@ import Bookcase from '../../components/Bookcase/Bookcase';
 class HomeScene extends Component {
 
 	static propTypes = {
-		books: PropTypes.array.isRequired,
+		books: PropTypes.array.isRequired ,
 		onMoveToShelf: PropTypes.func.isRequired
 	}
 
 	render() {
 		return (
 			<div className="list-books">
+
 				<div className="list-books-title">
 					<h1>MyReads</h1>
 				</div>
+
 				<div className="list-books-content">
 					<Bookcase
 						books={this.props.books}
@@ -31,6 +33,7 @@ class HomeScene extends Component {
 				<div className="open-search">
 					<Link to='/search'>Add a book</Link>
 				</div>
+
 			</div>
 		);
 	}

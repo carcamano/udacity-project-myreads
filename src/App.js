@@ -12,6 +12,11 @@ class BooksApp extends Component {
 		books: []
 	};
 
+	/**
+	 * @description Move a book from a shelf to another
+	 * @param {object} book - The book itself
+	 * @param {string} shelf - The destination shelf, should be one of: 'currentlyReading' , 'wantToRead' , 'read' or 'none'
+	 */
 	moveToShelf = ( book , shelf ) => {
 		BooksAPI.update( book , shelf ).then( () => {
 			this.setState(
