@@ -14,22 +14,13 @@ class BooksApp extends Component {
 
 	moveToShelf = ( book , shelf ) => {
 		BooksAPI.update( book , shelf ).then( () => {
-			if ( shelf === 'none' ) {
-				this.setState(
-					( state ) => ({
-						books: state.books.filter( bf => book.id !== bf.id )
-					})
-				);
-			} else {
-				book.shelf = shelf;
-				this.setState(
-					( state ) => ({
-						books: state.books
-							.filter( bf => book.id !== bf.id )
-							.concat( [ book ] )
-					})
-				);
-			}
+			this.setState(
+				( state ) => ({
+					books: state.books
+						.filter( bf => book.id !== bf.id )
+						.concat( shelf !== 'none' ? [ { ...book, shelf } ] : [] )
+				})
+			);
 		} )
 	};
 
