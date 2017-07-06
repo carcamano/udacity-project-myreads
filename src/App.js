@@ -18,7 +18,7 @@ class BooksApp extends Component {
 				( state ) => ({
 					books: state.books
 						.filter( bf => book.id !== bf.id )
-						.concat( shelf !== 'none' ? [ { ...book, shelf } ] : [] )
+						.concat( shelf !== 'none' ? [ { ...book , shelf } ] : [] )
 				})
 			);
 		} )
